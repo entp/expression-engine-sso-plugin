@@ -1,0 +1,21 @@
+Installation
+
+ExpressionEngine 1.6.9
+
+Simply drag the plugins/pi.multipass.php folder to your system/plugins directory.
+
+ExpressionEngine 2 Beta
+
+Drag the multipass folder to your system/expressionengine/third_party folder.
+
+Enabling MultiPass Single Sign-ON
+
+In order to use this plugin you need to enable MultiPass. Here's how:
+
+1. Login to your Tender app so you see your dashboard
+2. Click on the Site Settings nav item
+3. Scroll down to the bottom of the page
+4. Where it says "MultiPass Single Sign On" click on "Enabled".
+5. Copy and paste your SSO API key and your site key, make sure you keep them separate and you know which is which. 
+
+With those three pieces of information, this plugin will automatically generate your Tender link.
