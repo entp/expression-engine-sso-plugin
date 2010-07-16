@@ -1,43 +1,62 @@
-What is Tender's MultiPass Single-Sign on?
+== Description ==
 
-When you build a website with [CMS], it already comes with a user registration system. Tender compliments your application, product or marketing site by being able to share this registration systems information.
+What is Tender Support's MultiPass Single-Sign on?
 
-With MultiPass Single Sign On you don't need user's to re-register with Tender, who wants to do that? Terrible people. That's whom.
+When you build a website with [CMS], it already comes with a user registration system. Tender Support SSO compliments your application, product or marketing site by being able to share this registration systems information.
 
-With MultiPass we pass all the user information as securely as possible over a simple hyperlink. 
+With Tender Support SSO you don't need user's to re-register with Tender, who wants to do that? Terrible people. That's whom.
+
+With Tender Support SSO we pass all the user information as securely as possible over a simple hyperlink. 
 
 This plugin goes one step further and makes sure you don't have to do any of the weird encryption and crazy programming to secure the info. All you need to know are three simple things: 
 
-1. Your Tender url (e.g. http://help.tender.com)
+1. Your Tender Support url (e.g. http://help.tender.com)
 2. Your SSO Key
-3. Your Tender Key
+3. Your Tender Support Key
 
 How fantastic is that? This plugin will automatically generate that anchor element for you. It looks something like this:
 
 <a href="(the generated url)">Support</a>
 
-Enabling MultiPass SSO on Tender Support
+== Enabling MultiPass SSO on Tender Support == 
 
-In order to use this plugin you need to enable MultiPass on your Tender application. Here's how:
+In order to use this plugin you need to enable MultiPass on your Tender Support application. Here's how:
 
-1. Login to your Tender app so you see your dashboard
+1. Login to your Tender Support app so you see your dashboard
 2. Click on the Site Settings nav item
 3. Scroll down to the bottom of the page
 4. Where it says "MultiPass Single Sign On" click on "Enabled".
 5. Copy and paste your SSO API key and your site key, make sure you keep them separate and you know which is which. 
 
-With those three pieces of information, this plugin will automatically generate your Tender link.
+With those three pieces of information, this plugin will automatically generate your Tender Support link.
 
-3. Finally you can setup the plugin like this in your EE template:
+== Installation ==
+
+This section describes how to install the plugin and get it working.
+
+ExpressionEngine 1.6.9
+
+Simply drag the plugins/pi.multipass.php folder to your system/plugins directory.
+
+
+ExpressionEngine 2 Beta
+
+Drag the multipass folder to your system/expressionengine/third_party folder.
+
+
+Once installed, you can setup the plugin like this in your EE template:
 
 {exp:multipass sso_key="your_sso_key" key="your_tender_key" link="yourtenderurl.com"}
 
-You can also add optional parameters: 
+Where "link" is the link to your Tender app. For example, Tender Support app is called MultiPass. Therefore, the link is "http://multipass.tenderapp.com". You don't even have to add the http:// if you don't want to. 
 
-text="Support" You can change the text of the link
+It works perfectly well if you've setup Tender Support with your own domain. So use that link instead if you'd like (e.g. help.mydomain.com).
 
-Where "link" is the link to your Tender app. My Tender app, for example, is called MultiPass. Therefore, my link is "http://multipass.tenderapp.com". You don't even have to add the http:// if you don't want to. 
+You can also add optional parameters to change the text of the link:
 
-It works perfectly well if you've setup Tender with your own domain. So use that link instead if you'd like (e.g. help.mydomain.com).
+{exp:multipass sso_key="your_sso_key" key="your_tender_key" link="yourtenderurl.com" text="LinkText"}
+
+where text="Support" will generate <a href="(generated link)">Support</a>
+
 
 Just so you know, it's an incredibly long and ugly URL. It doesn't look pretty, but it works so well. This just means your data is as secure as it can possibly be.
